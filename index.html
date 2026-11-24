@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>บ้านสบู่ — สบู่แฮนด์เมด</title>
+  <meta name="description" content="สบู่แฮนด์เมด คัดสรรวัตถุดิบอย่างใส่ใจ">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#"><span class="brand-mark">✿</span> บ้านสบู่</a>
+  <nav><a href="#products">สินค้า</a><a href="#about">เกี่ยวกับเรา</a><a href="#contact">ติดต่อ</a></nav>
+  <button class="cart-button" id="openCart">ตะกร้า <span id="cartCount">0</span></button>
+</header>
+<main>
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">HANDMADE SOAP · MADE WITH CARE</p>
+      <h1>ดูแลผิวอย่างอ่อนโยน<br>ในทุก ๆ วัน</h1>
+      <p>สบู่แฮนด์เมดที่ตั้งใจทำ คัดสรรส่วนผสมเพื่อการดูแลผิวในกิจวัตรประจำวัน</p>
+      <a class="primary-link" href="#products">เลือกชมสินค้า <span>→</span></a>
+    </div>
+    <div class="hero-art"><div class="sun"></div><div class="soap soap-one"></div><div class="soap soap-two"></div><span class="leaf">✿</span></div>
+  </section>
+  <section class="section" id="products">
+    <div class="section-heading"><div><p class="eyebrow">OUR COLLECTION</p><h2>สินค้าของเรา</h2></div><p>เลือกสบู่ที่เหมาะกับวันของคุณ</p></div>
+    <div class="product-grid" id="productGrid"></div>
+  </section>
+  <section class="about" id="about"><div class="about-icon">❀</div><div><p class="eyebrow">A LITTLE ABOUT US</p><h2>ความใส่ใจ เริ่มต้นจากก้อนเล็ก ๆ</h2><p>บ้านสบู่เชื่อว่าการดูแลตัวเองไม่จำเป็นต้องซับซ้อน เราจึงตั้งใจคัดเลือกสินค้าและแพ็คทุกคำสั่งซื้ออย่างเรียบร้อย</p></div></section>
+</main>
+<footer id="contact"><strong>บ้านสบู่</strong><span>สอบถามเพิ่มเติม: 08X-XXX-XXXX</span><span>© 2026 Baan Soap</span></footer>
+
+<div class="overlay" id="cartOverlay"></div>
+<aside class="cart-drawer" id="cartDrawer">
+  <div class="drawer-head"><h2>ตะกร้าสินค้า</h2><button class="icon-button" id="closeCart">✕</button></div>
+  <div id="cartItems" class="cart-items"><p class="muted">ยังไม่มีสินค้าในตะกร้า</p></div>
+  <div class="cart-total"><span>ยอดรวม</span><strong id="cartTotal">฿0</strong></div>
+  <form id="checkoutForm">
+    <h3>ข้อมูลสำหรับจัดส่ง</h3>
+    <label>ชื่อผู้รับ<input name="customerName" required placeholder="ชื่อ-นามสกุล"></label>
+    <label>เบอร์โทรศัพท์<input name="phone" required inputmode="tel" placeholder="08X-XXX-XXXX"></label>
+    <label>ที่อยู่จัดส่ง<textarea name="address" required rows="3" placeholder="บ้านเลขที่ ถนน แขวง/ตำบล เขต/อำเภอ จังหวัด รหัสไปรษณีย์"></textarea></label>
+    <button class="primary-button" type="submit">ยืนยันคำสั่งซื้อ</button>
+    <p class="tiny muted">ข้อมูลคำสั่งซื้อจะถูกบันทึกลง Google Sheets เมื่อเชื่อมต่อระบบแล้ว</p>
+    <p id="checkoutMessage" role="status"></p>
+  </form>
+</aside>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
